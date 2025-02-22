@@ -206,6 +206,9 @@ repositories {
             includeModule("org.squiddev", "Cobalt")
         }
     }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -222,8 +225,9 @@ dependencies {
     compileOnly fg.deobf("curse.maven:curios-309927:4780213")
     compileOnly fg.deobf("curse.maven:jade-324717:4801177")
     compileOnly fg.deobf("curse.maven:opencomputers2-437654:3630307")
-
+    implementation 'libs:Sodium-NeoForge-mc1.20.1-0.6.0-Fix'
     implementation "malte0811:BlockModelSplitter:2.0.1"
+
     testImplementation('junit:junit:4.13.2')
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
